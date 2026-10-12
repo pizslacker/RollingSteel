@@ -259,6 +259,7 @@ int main(void)
     float gravity = -25.0f;
     float jumpForce = 12.0f;
     bool isGrounded = false;
+    bool jumped = false;
     
     Vector2 crackPos[MAX_CRACKS] = { 0 };
     float crackOp[MAX_CRACKS] = { 0 };
@@ -277,21 +278,24 @@ int main(void)
         if (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT))  terrainOffset.x -= speed * dt;
         if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT)) terrainOffset.x += speed * dt;
 
-        // --- PHYSICS UPDATE ---
+       // --- PHYSICS UPDATE ---
         float currentHeight = GetTerrainHeight(terrainOffset.x, terrainOffset.y);
         bool wasGrounded = isGrounded; 
         
         ballVelocityY += gravity * dt; 
         ballPos.y += ballVelocityY * dt; 
         
+        // Collision Detection with terrain
         if (ballPos.y <= currentHeight + ballRadius) {
             ballPos.y = currentHeight + ballRadius; 
             
-            if (!wasGrounded && ballVelocityY < -2.0f) {
+            // Only play sound and create cracks if we actually jumped
+            if (!wasGrounded && jumped) {
                 PlaySound(landSound);
                 crackPos[currentCrack] = terrainOffset; 
                 crackOp[currentCrack] = Clamp(-ballVelocityY / 25.0f, 0.4f, 0.85f); 
                 currentCrack = (currentCrack + 1) % MAX_CRACKS; 
+                jumped = false; 
             }
             
             ballVelocityY = 0.0f;
@@ -302,6 +306,7 @@ int main(void)
         
         if (IsKeyPressed(KEY_SPACE) && isGrounded) {
             ballVelocityY = jumpForce;
+            jumped = true; 
             PlaySound(jumpSound);
         }
 
