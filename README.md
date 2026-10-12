@@ -24,7 +24,7 @@ To compile and run this project, you need:
 
 ### How to Compile (Linux)
 
-Run the following command in your terminal (make sure drone.mp3 is in the same directory if you are using the background music, and that you have Raylib installed with the static library located at `/usr/local/lib/raylib.a`):
+Run the following command in your terminal (make sure drone.mp3 is in the same directory if you are using the background music, and that you have the Raylib static library located at `/usr/local/lib/libraylib.a`):
 ```bash
 make
 ./RollingSteel
