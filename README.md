@@ -24,7 +24,7 @@ To compile and run this project, you need:
 
 Run the following command in your terminal (make sure drone.mp3 is in the same directory if you are using the background music):
 ```bash
-gcc rollingsteel.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o RollingSteel
+make
 ./RollingSteel
 ```
 
