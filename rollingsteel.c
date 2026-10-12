@@ -162,7 +162,7 @@ int main(void)
 {
     const int screenWidth = 1280;
     const int screenHeight = 720;
-    InitWindow(screenWidth, screenHeight, "SteelBlue Jump (& Infinite Horizon)");
+    InitWindow(screenWidth, screenHeight, """--^`` RollingSteel ``^--""");
 
     // --- AUDIO SETUP ---
     InitAudioDevice(); 
