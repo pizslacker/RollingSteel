@@ -11,10 +11,8 @@ A mesmerizing 3D game built with C and Raylib where you control a highly reflect
   - Dynamic soft drop shadows that scale with height.
   - Procedural impact cracks rendered dynamically on the terrain.
   - Physics System: Real gravity, jumping, and momentum mechanics.
-
-Procedural Audio: Jump and landing sound effects are mathematically generated in-memory on startup—no external .wav files required! (Background music utilizes streaming).
-
-Parallax Background: Layered, moving sky textures.
+  - Procedural Audio: Jump and landing sound effects are mathematically generated in-memory on startup—no external .wav files required! (Background music utilizes streaming).
+  - Parallax Background: Layered, moving sky textures.
 
 ### Requirements
 
