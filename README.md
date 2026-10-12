@@ -20,7 +20,7 @@ To compile and run this project, you need:
 - A C compiler (GCC, Clang, etc.)
 - Raylib installed on your system.
 
-How to Compile (Linux)
+### How to Compile (Linux)
 
 Run the following command in your terminal (make sure drone.mp3 is in the same directory if you are using the background music):
 ```bash
