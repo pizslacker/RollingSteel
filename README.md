@@ -21,6 +21,7 @@ A 3D tech-demo built with `C` and `Raylib` where you control a highly reflective
 To compile and run this project, you need:
 - A C compiler (GCC, Clang, etc.)
 - Raylib installed on your system.
+- An `OpenGL`-capable `X11` window server.
 
 ### How to Compile (Linux)
 
