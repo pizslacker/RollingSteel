@@ -1,6 +1,6 @@
 # Rolling Steel
 
-A 3D tech-demo built with ` C` and `Raylib` where you control a highly reflective steel ball rolling across an infinitely scrolling, procedurally deforming checkered horizon.
+A 3D tech-demo built with `C` and `Raylib` where you control a highly reflective steel ball rolling across an infinitely scrolling, procedurally deforming checkered horizon.
 
 ![RollingSteel](images/RollingSteel.png)
 
